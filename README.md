@@ -2,7 +2,7 @@
 
 All labs and projects for ATLS 4519 - Creative Web Development
 
-## Assignment One - Zsh/Bash Me
+## [Assignment One - Zsh/Bash Me](https://github.com/charliekoepke/ATLS4519/tree/main/assignment1)
 
 > Create and publish a one page html document using ONLY the terminal (no GUI).
 > Use Zsh or Bash to create a local dev directory, cd into dev and create img, css, and js directories and 2 html documents, index.html and zsh-bash-me.html.
