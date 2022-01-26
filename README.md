@@ -9,4 +9,4 @@ All labs and projects for ATLS 4519 - Creative Web Development
 > Code the html markup in the terminal only using NANO.
 > Connect to the creative server using the terminal (no GUI ftp clients) create a dev directory inside your main public_html directory and upload your zsh-bash-me.html page to the dev directory.
 
-[Link}(https://charliekoepke.wordpress.com/2022/01/19/lab-zsh-bash-me) to documentation page.
+[Link](https://charliekoepke.wordpress.com/2022/01/19/lab-zsh-bash-me) to documentation page.
