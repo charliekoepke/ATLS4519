@@ -87,3 +87,6 @@ footer {
     grid-column: 4 / 7;
     text-align: center;
 }
+.full {
+    grid-column: 1 / 7;
+}
