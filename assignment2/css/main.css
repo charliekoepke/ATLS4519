@@ -22,6 +22,9 @@ img {
 iframe {
     width: 400px;
 }
+footer {
+    text-align: center;
+}
 #talkbubble {
     width: 200px;
     height: 80px;
