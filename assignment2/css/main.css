@@ -21,6 +21,8 @@ img, iframe {
     height: 250px;
 }
 ul {
+    text-align: center;
+    margin-left: -50px;
     list-style-type: none;
 }
 footer {
