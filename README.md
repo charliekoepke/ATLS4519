@@ -30,4 +30,4 @@ All labs and projects for ATLS 4519 - Creative Web Development
 > Use css animation, css patterns, css shapes, and creative google fonts and icons.
 > For this project you will use git to make at least 100 git commits and "many" pushes to github.
 
-
+[Link](https://charliekoepke.wordpress.com/2022/01/31/lab-commitment) to documentation page.
