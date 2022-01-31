@@ -62,15 +62,19 @@ footer {
 }
 .leftShort {
     grid-column: 1 / 3;
+    align-items: center;
 }
 .leftLong {
     grid-column: 1 / 5;
+    align-items: center;
 }
 .rightShort {
     grid-column: 5 / 7;
+    align-items: center;
 }
 .rightLong {
     grid-column: 3 / 7;
+    align-items: center;
 }
 .left {
     grid-column: 1 / 4;
