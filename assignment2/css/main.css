@@ -22,15 +22,15 @@ p {
     border-radius: 10px;
   }
 #talkbubble:before {
-content: "";
-position: absolute;
-right: 100%;
-top: 26px;
-width: 0;
-height: 0;
-border-top: 13px solid transparent;
-border-right: 26px solid white;
-border-bottom: 13px solid transparent;
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid white;
+    border-bottom: 13px solid transparent;
 }
 .element {
     line-height: 80px;
