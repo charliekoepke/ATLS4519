@@ -20,6 +20,9 @@ img, iframe {
     width: 400px;
     height: 250px;
 }
+ul {
+    list-style-type: none;
+}
 footer {
     text-align: center;
 }
