@@ -10,7 +10,7 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Creative Web Development Course Website](https://creative.colorado.edu/~schaal/dev/)
 
-[Personal Portfolio](https://charliekoepke.wordpress.com/)
+[Project Documentation](https://charliekoepke.wordpress.com/projects/atls-4519-creative-web-development/)
 
 ## [Assignment 1 - Zsh/Bash Me](https://github.com/charliekoepke/ATLS4519/tree/main/assignment1)
 
