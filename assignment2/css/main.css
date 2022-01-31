@@ -16,6 +16,12 @@ section {
     margin-left: 50px;
     margin-right: 50px;
 }
+img {
+    width: 400px;
+}
+iframe {
+    width: 400px;
+}
 #talkbubble {
     width: 200px;
     height: 80px;
@@ -62,6 +68,11 @@ section {
 .rightLong {
     grid-column: 3 / 7;
 }
-.half {
+.left {
     grid-column: 1 / 4;
+    text-align: center;
+}
+.right {
+    grid-column: 4 / 7;
+    text-align: center;
 }
