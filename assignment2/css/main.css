@@ -12,6 +12,10 @@ body {
 p {
     font-size: 16pt;
 }
+section {
+    margin-left: 50px;
+    margin-right: 50px;
+}
 #talkbubble {
     width: 200px;
     height: 80px;
@@ -42,19 +46,22 @@ p {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
 .leftShort {
-    grid-column: 1 / 2;
-}
-.leftLong {
     grid-column: 1 / 3;
 }
+.leftLong {
+    grid-column: 1 / 5;
+}
 .rightShort {
-    grid-column: 3 / 4;
+    grid-column: 5 / 7;
 }
 .rightLong {
-    grid-column: 2 / 4;
+    grid-column: 3 / 7;
+}
+.half {
+    grid-column: 1 / 4;
 }
