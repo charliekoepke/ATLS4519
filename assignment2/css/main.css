@@ -9,18 +9,14 @@ body {
     /* Font from Google Fonts */
     font-family: 'Dongle', sans-serif;
 }
-p {
+p, a {
     font-size: 16pt;
 }
 section {
     margin-left: 50px;
     margin-right: 50px;
 }
-img {
-    width: 400px;
-    height: 250px;
-}
-iframe {
+img, iframe {
     width: 400px;
     height: 250px;
 }
