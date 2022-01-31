@@ -21,6 +21,8 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Link](https://charliekoepke.wordpress.com/2022/01/19/lab-zsh-bash-me) to documentation page.
 
+[Link](https://creative.colorado.edu/~chko6454/atls4519/assignment1/zsh-bash-me.html) to webpage.
+
 ## [Assignment 2 - Commitment](https://github.com/charliekoepke/ATLS4519/tree/main/assignment2)
 
 > Create a subdirectory "commitment" inside your dev directory.
@@ -31,3 +33,5 @@ All labs and projects for ATLS 4519 - Creative Web Development
 > For this project you will use git to make at least 100 git commits and "many" pushes to github.
 
 [Link](https://charliekoepke.wordpress.com/2022/01/31/lab-commitment) to documentation page.
+
+[Link](https://creative.colorado.edu/~chko6454/atls4519/assignment2/) to webpage.
