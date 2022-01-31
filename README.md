@@ -10,6 +10,8 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Creative Web Development Course Website](https://creative.colorado.edu/~schaal/dev/)
 
+[Personal Portfolio](https://charliekoepke.wordpress.com/)
+
 ## [Assignment 1 - Zsh/Bash Me](https://github.com/charliekoepke/ATLS4519/tree/main/assignment1)
 
 > Create and publish a one page html document using ONLY the terminal (no GUI).
