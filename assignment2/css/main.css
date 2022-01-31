@@ -18,7 +18,7 @@ a {
 a:hover {
     color: rgb(0, 165, 0);
 }
-section {
+section, main {
     margin-left: 50px;
     margin-right: 50px;
 }
