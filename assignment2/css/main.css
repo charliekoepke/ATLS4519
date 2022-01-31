@@ -12,6 +12,12 @@ body {
 p, a {
     font-size: 16pt;
 }
+a {
+    color: rgb(17, 107, 17);
+}
+a:hover {
+    color: rgb(0, 165, 0);
+}
 section {
     margin-left: 50px;
     margin-right: 50px;
