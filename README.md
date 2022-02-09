@@ -24,4 +24,7 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 A method invented by surrealists by which a collection of words or images is collectively assembled. Each collaborator adds a composition in sequence. For this project, construct a creative narrative where each team member contributes a paragraph based on what the previous person contributed.
 
+[Repository](https://github.com/alle0200/Exquisite-Corpse.git)
+
 [Documentation]()
+
