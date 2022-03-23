@@ -1,0 +1,13 @@
+@import "./css/normalize";
+@import "./css/variables";
+@import "./css/functions";
+@import "./css/base-before";
+@import "./css/base";
+@import "./css/base-after";
+@import "./css/layout";
+
+$bg: yellow;
+
+body {
+    background: $bg;
+}
