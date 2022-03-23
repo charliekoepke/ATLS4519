@@ -6,7 +6,7 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Creative Web Development Course Website](https://creative.colorado.edu/~schaal/dev/)
 
-[All Documentation](https://charliekoepke.wordpress.com/projects/atls-4519-creative-web-development/)
+[Project Documentation](https://charliekoepke.wordpress.com/projects/atls-4519-creative-web-development/)
 
 ## [Assignment 1 - Zsh/Bash Me](https://creative.colorado.edu/~chko6454/atls4519/assignment1/zsh-bash-me.html)
 
@@ -22,9 +22,16 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 ## [Assignment 3 - Exquisite Corpse](https://creative.colorado.edu/~chko6454/atls4519/assignment3/)
 
-A method invented by surrealists by which a collection of words or images is collectively assembled. Each collaborator adds a composition in sequence. For this project, construct a creative narrative where each team member contributes a paragraph based on what the previous person contributed.
+> A method invented by surrealists by which a collection of words or images is collectively assembled. Each collaborator adds a composition in sequence. For this project, construct a creative narrative where each team member contributes a paragraph based on what the previous person contributed.
 
 [Repository](https://github.com/alle0200/Exquisite-Corpse.git)
 
 [Documentation](https://charliekoepke.wordpress.com/2022/02/14/lab-exquisite-corpse/)
 
+## Assignment 4 - HTML5 Boilerplate
+
+> Create a custom starting template that combines HTML5 boilerplate with a webpack dart-sass setup. Modify to create your own custom starter elements. Version with Git and create a repository on GitHub. Continue to develop this and push to GitHub with new updates.
+
+[Repository](https://github.com/charliekoepke/HTML5Boilerplate)
+
+[Documentation](https://charliekoepke.wordpress.com/2022/03/02/lab-html5-boilerplate/)
