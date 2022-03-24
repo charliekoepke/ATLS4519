@@ -6,8 +6,32 @@
 @import "./css/base-after";
 @import "./css/layout";
 
-$bg: yellow;
-
+html {
+    
+}
 body {
-    background: $bg;
+    background-color: green;
+    background-image: url("../dist/img/grass-background.jpg");
+}
+header {
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    width: 60%;
+}
+
+// Parallax Scrolling
+.parallax {
+    width: 100%;
+    height: 25em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    margin: 0 auto;
+    padding: 5em 0;
+    max-width: 50em;
+    background: white;
 }
