@@ -20,6 +20,11 @@ header {
     width: 60%;
     height: 3em;
 }
+h1,
+h2,
+p {
+    margin: 1em;
+}
 
 // Parallax Scrolling
 .parallax {
@@ -32,7 +37,33 @@ header {
 }
 .container {
     margin: 0 auto;
-    padding: 5em 1em;
+    padding: 5em 0;
     max-width: 50em;
     background: white;
+}
+
+// Images
+
+.harvest-moon-1-jpeg {
+    background-image: url("../dist/img/harvest-moon-1.jpeg");
+}
+
+.harvest-moon-2-jpeg {
+    background-image: url("../dist/img/harvest-moon-2.jpeg");
+}
+
+.sos-marriage-candidates {
+    background-image: url("../dist/img/sos-marriage-candidates.png");
+}
+
+.hm-rivals {
+    background-image: url("../dist/img/hm-rivals.png");
+}
+
+.stardew-valley {
+    background-image: url("../dist/img/stardew-valley.jpeg");
+}
+
+.harvest-moon-mfomt {
+    background-image: url("../dist/img/harvest-moon-mfomt.gif");
 }
