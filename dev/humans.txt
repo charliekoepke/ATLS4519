@@ -1,0 +1,13 @@
+TEAM
+
+Web Designer: Charlie Koepke
+Email: charliejunkoepke@gmail.com
+
+THANKS
+
+SITE
+
+Last Update: 3.23.2022
+Language: English
+DOCTYPE: HTML5
+IDE: VisualStudio Code

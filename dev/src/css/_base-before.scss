@@ -1,0 +1,13 @@
+.clearfix::before {
+    content: "";
+    display: table;
+}
+
+@media print {
+    *::before {
+        background: #FFF !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
