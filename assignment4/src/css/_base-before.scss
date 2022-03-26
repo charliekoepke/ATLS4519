@@ -1,14 +1,13 @@
 .clearfix::before {
-  content: "";
-  display: table;
-  }
+    content: "";
+    display: table;
+}
 
 @media print {
-  *::before {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    *::before {
+        background: #FFF !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 }

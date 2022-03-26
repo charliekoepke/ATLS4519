@@ -6,8 +6,7 @@
 @import "./css/base-after";
 @import "./css/layout";
 
-$bg: yellow;
-
-body {
-    background: $bg;
+html {
+    // Test Background Color
+    background: yellow;
 }
