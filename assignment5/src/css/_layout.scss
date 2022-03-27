@@ -1,3 +1,28 @@
 // Mobile Layout
+@media screen and (max-width: 640px) {
+    .harvest-moon-1-jpeg {
+        background-position: left;
+    }
+    
+    .harvest-moon-2-jpeg {
+        background-image: url("../img/harvest-moon-2.jpeg");
+    }
+    
+    .sos-marriage-candidates {
+        background-image: url("../img/sos-marriage-candidates.png");
+    }
+    
+    .hm-rivals {
+        background-image: url("../img/hm-rivals.png");
+    }
+    
+    .stardew-valley {
+        background-image: url("../img/stardew-valley.jpeg");
+    }
+    
+    .harvest-moon-mfomt {
+        background-image: url("../img/harvest-moon-mfomt.gif");
+    }
+}
 
 // Tablet Layout

@@ -39,6 +39,23 @@ p {
     border-radius: 50%;
 }
 
+// Parallax Scrolling
+.parallax {
+    width: 100%;
+    height: 25em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    margin: 0 auto;
+    padding: 5em 0;
+
+    // Add dirt texture as background image
+    background: green;
+}
+
 // Images
 
 .harvest-moon-1-jpeg {
