@@ -21,3 +21,7 @@
 [stardew-valley.jpeg](https://knowtechie.com/stardew-valley-vs-harvest-moon/)
 
 [harvest-moon-mfomt.gif](https://makeagif.com/gif/nurse-peachharvest-moon-ds-cute-2008-m1-uc0)
+
+## Font Sources
+
+[Funhouse Regular](https://fontsgeek.com/fonts/Funhouse-Regular)
