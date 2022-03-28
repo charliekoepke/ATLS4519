@@ -8,9 +8,40 @@
 
 body {
     font-family: sans-serif;
-    max-width: 35.7rem;
+    max-width: 65%;
     margin: 0 auto;
     padding: 0 1.25rem;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+// Carousel Images
+#carousel__slide1 {
+    // Test Image
+    background-image: url(../img/lemon.jpg);
+}
+
+#carousel__slide2 {
+    background-image: url();
+}
+
+#carousel__slide3 {
+    background-image: url();
+}
+
+#carousel__slide4 {
+    background-image: url();
+}
+
+#carousel__slide5 {
+    background-image: url();
 }
 
 // CSS Carousel
@@ -65,14 +96,10 @@ li {
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: lightblue;
     counter-increment: item;
 }
-.carousel__slide:nth-child(even) {
-    background-color: lightpink;
-}
 .carousel__slide:before {
-    content: counter(item);
+    // content: counter(item);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,7 +144,7 @@ li {
 .carousel__navigation {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -1rem;
     left: 0;
     text-align: center;
 }
