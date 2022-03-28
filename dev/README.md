@@ -11,3 +11,7 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 ## Code Sources
 
 [CSS Carousel](https://css-tricks.com/css-only-carousel/)
+
+## Fonts
+
+Fonts downloaded from [Google Fonts](https://fonts.google.com/)

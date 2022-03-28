@@ -6,8 +6,18 @@
 @import "./css/base-after";
 @import "./css/layout";
 
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+    background-color: #C3CDE0;
+    color: #1C1C25;
+    font-family: 'Old Standard TT', serif;
+}
+
 body {
-    font-family: sans-serif;
     max-width: 65%;
     margin: 0 auto;
     padding: 0 1.25rem;
@@ -18,6 +28,10 @@ footer {
     text-align: center;
 }
 
+header {
+    font-family: 'Rock 3D', sans-serif;
+}
+
 footer {
     margin-top: 2rem;
 }
@@ -25,7 +39,9 @@ footer {
 // Carousel Images
 #carousel__slide1 {
     // Test Image
-    background-image: url(../img/lemon.jpg);
+    background-image: url(../img/zsh-bash-me.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #carousel__slide2 {
@@ -99,7 +115,6 @@ li {
     counter-increment: item;
 }
 .carousel__slide:before {
-    // content: counter(item);
     position: absolute;
     top: 50%;
     left: 50%;
