@@ -1,4 +1,4 @@
-// CSS Carousel
+// CSS Carousel Functions
 
 @keyframes tonext {
     75% {
@@ -42,5 +42,26 @@
     }
     100% {
         scroll-snap-align: center;
+    }
+}
+
+// CSS Carousel Animations
+
+@media (hover:hover) {
+    .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .carousel__slide:last-child .carousel__snapper {
+        animation-name: tostart, snap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+        animation-name: none;
     }
 }
