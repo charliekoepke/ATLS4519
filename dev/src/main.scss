@@ -36,28 +36,39 @@ footer {
     margin-top: 2rem;
 }
 
+#github-logo {
+    width: 25%;
+}
+
 // Carousel Images
-#carousel__slide1 {
-    // Test Image
-    background-image: url(../img/zsh-bash-me.png);
+
+#carousel__slide1,
+#carousel__slide2,
+#carousel__slide3,
+#carousel__slide4,
+#carousel__slide5 {
     background-position: center;
     background-repeat: no-repeat;
 }
 
+#carousel__slide1 {
+    background-image: url(../img/zsh-bash-me.png);
+}
+
 #carousel__slide2 {
-    background-image: url();
+    background-image: url(../img/commitment.png);
 }
 
 #carousel__slide3 {
-    background-image: url();
+    background-image: url(../img/parallax-narrative.png);
 }
 
 #carousel__slide4 {
-    background-image: url();
+    background-image: url(../img/creative-project.png);
 }
 
 #carousel__slide5 {
-    background-image: url();
+    background-image: url(../img/boilerplate.png);
 }
 
 // CSS Carousel
@@ -173,7 +184,6 @@ li {
     height: 1.5rem;
     background-color: #333;
     background-clip: content-box;
-    border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.1s;
@@ -205,8 +215,7 @@ li {
 .carousel::after {
     content: '';
     z-index: 1;
-    background-color: #333;
-    background-size: 1.5rem 1.5rem;
+    background-size: 3rem 3rem;
     background-repeat: no-repeat;
     background-position: center center;
     color: #FFF;

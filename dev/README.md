@@ -8,6 +8,8 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 
 ## Image Sources
 
+[GitHub Logo](https://pngset.com/download-free-png-wilue)
+
 ## Code Sources
 
 [CSS Carousel](https://css-tricks.com/css-only-carousel/)
@@ -15,3 +17,7 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 ## Fonts
 
 Fonts downloaded from [Google Fonts](https://fonts.google.com/)
+
+## Other Sources
+
+[Colour Palette](https://color.adobe.com/blue-color-theme-10213841/)
