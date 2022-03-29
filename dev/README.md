@@ -14,6 +14,8 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 
 [CSS Carousel](https://css-tricks.com/css-only-carousel/)
 
+[Invisible Link](https://stackoverflow.com/questions/2643529/add-url-link-in-css-background-image)
+
 ## Fonts
 
 Fonts downloaded from [Google Fonts](https://fonts.google.com/)
