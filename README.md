@@ -36,8 +36,14 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Documentation](https://charliekoepke.wordpress.com/2022/03/02/lab-html5-boilerplate/)
 
-## [Assignment 5 - Parallax Narrative]()
+## [Assignment 5 - Parallax Narrative](https://github.com/charliekoepke/ATLS4519/tree/main/assignment5)
 
 > Create a narrative using the mechanic of CSS parallax scrolling. Using the [HTML5 Boilerplate](https://github.com/charliekoepke/HTML5Boilerplate) as a template. The topic/story is up to you, but create something that you'd like to share with the world. [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision) will also be added to the page to see how much traffic it produces.
+
+[Documentation](https://charliekoepke.wordpress.com/2022/03/09/lab-parallax-narrative/)
+
+## [Final Project - Creative Project]()
+
+> Choose a Node.js framework and npm package to learn about, and build a creative project that demonstrates the technologies usage and potential. Make it academic, artistic, and creative! Include a comprehensive "How To" as well, so other people can use and learn.
 
 [Documentation]()
