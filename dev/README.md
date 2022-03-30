@@ -16,6 +16,8 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 
 [Invisible Link](https://stackoverflow.com/questions/2643529/add-url-link-in-css-background-image)
 
+[CSS Hamburger Menu](https://alvarotrigo.com/blog/hamburger-menu-css/)
+
 ## Fonts
 
 Fonts downloaded from [Google Fonts](https://fonts.google.com/)
