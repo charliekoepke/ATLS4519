@@ -20,7 +20,7 @@ A collection of all the class projects for ATLS 4519 - Creative Web Development.
 
 ## Fonts
 
-Fonts downloaded from [Google Fonts](https://fonts.google.com/)
+Fonts imported from [Google Fonts](https://fonts.google.com/)
 
 ## Other Sources
 
