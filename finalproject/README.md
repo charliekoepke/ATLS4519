@@ -1,10 +1,8 @@
-# Creative Project
+# Creative Project - koa.js
 
 > Choose a Node.js framework and npm package to learn about, and build a creative project that demonstrates the technologies usage and potential. Make it academic, artistic, and creative! Include a comprehensive "How To" as well, so other people can use and learn.
 
-The Node.js I decided to use is [koa.js](https://koajs.com/). They have all of their functions and how to use them included on their website, so my project aimed to illustrate those functions in a more artistic and creative way.
-
-# koa.js
+The Node.js framework I decided to use is [koa.js](https://koajs.com/). They have all of their functions and how to use them included on their website, so my project aimed to illustrate those functions in a more artistic and creative way.
 
 ## Introduction
 
@@ -376,11 +374,15 @@ The following accessors and alias Response equivalents:
 
 ## Request
 
+A Koa `Request` object is an abstraction on top of node's vanilla request object, providing additional functionality that is useful for every day HTTP server development.
+
 ### API
 
 ### request.header
 
 ### request.header=
+
+Set request header object.
 
 ### request.headers
 
@@ -388,15 +390,23 @@ The following accessors and alias Response equivalents:
 
 ### request.method
 
+Request method.
+
 ### request.method=
 
 ### request.length
 
 ### request.url
 
+Get request URL.
+
 ### request.url=
 
+Set request URL, useful for url rewrites.
+
 ### request.originalUrl
+
+Get request original URL.
 
 ### request.origin
 
@@ -404,21 +414,35 @@ The following accessors and alias Response equivalents:
 
 ### request.path
 
+Get request pathname.
+
 ### request.path=
+
+Set request pathname and retain query-string when present.
 
 ### request.querystring
 
+Get raw query string void of `?`.
+
 ### request.querystring=
+
+Set raw query string.
 
 ### request.search
 
+Get raw query string with the `?`.
+
 ### request.search=
+
+Set raw query string.
 
 ### request.host
 
 ### request.hostname
 
 ### request.URL
+
+Get WHATWG parsed URL object.
 
 ### request.type
 
@@ -456,17 +480,27 @@ The following accessors and alias Response equivalents:
 
 ### request.idempotent
 
+Check if the request is idempotent.
+
 ### request.socket
 
+Return the request socket.
+
 ### request.get(field)
+
+Return request header with case-insensitive `field`.
 
 ---
 
 ## Response
 
+A Koa `Response` object is an abstraction on top of node's vanilla response object, providing additional functionality that is useful for every day HTTP server development.
+
 ### API
 
 ### response.header
+
+Response header object.
 
 ### response.headers
 
@@ -480,17 +514,29 @@ The following accessors and alias Response equivalents:
 
 ### response.message=
 
+Set response status message to the given value.
+
 ### response.length=
+
+Set response Content-Length to the given value.
 
 ### response.length
 
+Return response Content-Length as a number when present, or deduce from `ctx.body` when possible, or `undefined`.
+
 ### repsonse.body
+
+Get response body.
 
 ### response.body=
 
 ### String
 
+The Content-Type is defaulted to text/html or text/plain, both with a default charset of utf-8. The Content-Length field is also set.
+
 ### Buffer
+
+The Content-Type is defaulted to application/octet-stream, and Content-Length is also set.
 
 ### Stream
 
@@ -506,7 +552,9 @@ The following accessors and alias Response equivalents:
 
 ### response.set(fields)
 
-### response.remove(fields)
+### response.remove(field)
+
+Remove header `field`.
 
 ### response.type
 
@@ -520,7 +568,11 @@ The following accessors and alias Response equivalents:
 
 ### response.headerSent
 
+Check if a response header has already been sent. Useful for seeing if the client may be notified on error.
+
 ### response.lastModified
+
+Return the `Last-Modified` header as a `Date`, if it exists.
 
 ### response.lastModified=
 
@@ -528,15 +580,32 @@ The following accessors and alias Response equivalents:
 
 ### response.vary(field)
 
+Vary on `field`.
+
 ### response.flushHeaders()
+
+Flush any set headers, and begin the body.
 
 ---
 
 ## Sponsor
 
+[Apex Ping](https://apex.sh/ping/) is a beautiful uptime monitoring solution for websites and APIs, by one of the original authors of Koa.
+
 ---
 
 ## Links
+
+Community links to discover third-party middleware for Koa, full runnable examples, thorough guides and more! If you have questions join us in IRC!
+
+- [GitHub repository](https://github.com/koajs/koa)
+- [Examples](https://github.com/koajs/examples)
+- [Middleware](https://github.com/koajs/koa/wiki)
+- [Wiki](https://github.com/koajs/koa/wiki)
+- [Mailing list](https://groups.google.com/g/koajs)
+- [Guide](https://github.com/koajs/koa/blob/master/docs/guide.md)
+- [FAQ](https://github.com/koajs/koa/blob/master/docs/faq.md)
+- **#koajs** on freenode
 
 ---
 
