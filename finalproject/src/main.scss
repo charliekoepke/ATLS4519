@@ -20,12 +20,16 @@ nav a {
     color: black;
 }
 
-h2 {
-    text-align: center;
-}
-
 h1 {
     font-size: 4em;
+}
+
+strong {
+    font-weight: 900;
+}
+
+b {
+    font-weight: 900;
 }
 
 header {
@@ -52,6 +56,17 @@ footer a {
     border-radius: 1em;
     margin: 1em;
     padding: 0.25em;
+}
+#showcase h2 {
+    text-align: center;
+}
+
+#main {
+    background-image: linear-gradient(#696969, black);
+    color: white;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
 }
 
 // Dropdown Menu
@@ -105,7 +120,6 @@ footer a {
 // Codebox
 
 .codebox {
-    border: 0.75px solid black;
     background-color: #303030;
     white-space: pre-line;
     color: white;

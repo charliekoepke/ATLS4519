@@ -17,9 +17,8 @@
     <body>
         <!-- Navigation -->
         <nav>
-            <a href="index.html">koa.js</a>
-            <div class="dropdown">
-                <button class="dropdown-button">Button</button>
+            <div class="dropdown clearfix">
+                <button class="dropdown-button"><a href="index.html">koa.js</a></button>
                 <div class="dropdown-content">
                     <a href="install.html">Install</a>
                     <a href="tutorial.html">Tutorial</a>
@@ -35,8 +34,92 @@
         </header>
         <!-- Main Content -->
         <main>
-            <section>
+            <section id="main">
+                <h2>Application</h2>
+                <hr>
+                <p>
+                    A Koa application is an object containing an array of middleware functions which are composed and executed in a stack-like manner upon request. Koa is similar to many other middleware systems that you may have encountered such as Ruby's Rack, Connect, and so on - however a key design decision was made to provide high level "sugar" at the otherwise low-level middleware layer. This improves interoperability, robustness, and makes writing middleware much more enjoyable.
+                </p>
+                <p>
+                    This includes methods for common tasks like content-negotiation, cache freshness, proxy support, and redirection among others. Despite supplying a reasonably large number of helpful methods Koa maintains a small footprint, as no middleware are bundled.
+                </p>
+                <p>
+                    The obligatory hello world application:
+                </p>
+                <div class="codebox">
+                    const Koa = require('koa');
+                    const app = new Koa();
 
+                    app.use(async ctx => {
+                        ctx.body = 'Hello World';
+                    });
+
+                    app.listen(3000);
+                </div>
+                <h3>Cascading</h3>
+                <p>
+                    Koa middleware cascade in a more traditional way as you may be used to with similar tools - this was previously difficult to make user friendly with node's use of callbacks. However with async functions we can achieve "true" middleware. Contrasting Connect's implementation which simply passes control through series of functions until one returns, Koa invoke "downstream", then control flows back "upstream".
+                </p>
+                <p>
+                    The following example responds with "Hello World", however first the request flows through the x-response-time and logging middleware to mark when the request started, then yields control through the response middleware. When a middleware invokes next() the function suspends and passes control to the next middleware defined. After there are no more middleware to execute downstream, the stack will unwind and each middleware is resumed to perform its upstream behaviour.
+                </p>
+                <div class="codebox">
+                    const Koa = require('koa');
+                    const app = new Koa();
+
+                    // logger 
+
+                    app.use(async (ctx, next) => {
+                        await next();
+                        const rt = ctx.response.get('X-Response-Time');
+                        console.log(`${ctx.method} ${ctx.url} - ${rt}`);
+
+                    });
+
+                    // x-response-time
+
+                    app.use(async (ctx, next) => {
+                        const start = Date.now();
+                        await next();
+                        const ms = Date.now() - start;
+                        ctx.set('X-Response-Time', `${ms}ms`);
+                    });
+
+                    // response
+
+                    app.use(async ctx => {
+                        ctx.body = 'Hello World';
+                    });
+
+                    app.listen(3000);
+                </div>
+                <h3>Settings</h3>
+                <p>
+                    Application settings are properties on the app instance, currently the following are supported:
+                </p>
+                <ul>
+                    <li>app.env defaulting to the <b>NODE_ENV</b> or "development"</li>
+                    <li>app.keys array of signed cookie keys</li>
+                    <li>app.proxy when true proxy header fields will be trusted</li>
+                    <li>app.subdomainOffset offset of .subdomains to ignore, default to 2</li>
+                    <li>app.proxyIpHeader proxy ip header, default to X-Forwarded-For</li>
+                    <li>app.maxIpsCount max ips read from proxy ip header, default to 0 (means infinity)</li>
+                </ul>
+                <p>
+                    You can pass the settings to the constructor:
+                </p>
+                <div class="codebox">
+                    const Koa = require('koa');
+                    const app = new Koa({ proxy: true });
+                </div>
+                <p>
+                    or dynamically:
+                </p>
+                <div class="codebox">
+                    const Koa = require('koa');
+                    const app = new Koa();
+                    app.proxy = true;
+                </div>
             </section>
         </main>
 
