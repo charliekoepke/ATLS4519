@@ -38,14 +38,251 @@
             <section id="showcase">
                 <h2>Showcase</h2>
                 <div class="codebox">
-                    // Here is some example code
-                    $ npm install koa
+                    /** 404 Example **/
+
+                    // app.js
+                    const Koa = require('koa');
+
+                    const app = module.exports = new Koa();
+
+                    app.use(async function pageNotFound(ctx) {
+                    // we need to explicitly set 404 here
+                    // so that koa doesn't assign 200 on body=
+                    ctx.status = 404;
+
+                    switch (ctx.accepts('html', 'json')) {
+                        case 'html':
+                        ctx.type = 'html';
+                        ctx.body = '<p>Page Not Found</p>';
+                        break;
+                        case 'json':
+                        ctx.body = {
+                            message: 'Page Not Found'
+                        };
+                        break;
+                        default:
+                        ctx.type = 'text';
+                        ctx.body = 'Page Not Found';
+                    }
+                    });
+
+                    if (!module.parent) app.listen(3000);
+
+                    // test.js
+                    const app = require('./app');
+                    const server = app.listen();
+                    const request = require('supertest').agent(server);
+
+                    describe('404', function() {
+                    after(function() {
+                        server.close();
+                    });
+
+                    describe('when GET /', function() {
+                        it('should return the 404 page', function(done) {
+                        request
+                            .get('/')
+                            .expect(404)
+                            .expect(/Page Not Found/, done);
+                        });
+                    });
+                    });
+
+                    /** Cookies **/
+
+                    // app.js
+                    const Koa = require('koa');
+                    const app = module.exports = new Koa();
+
+                    app.use(async function(ctx) {
+                    const n = ~~ctx.cookies.get('view') + 1;
+                    ctx.cookies.set('view', n);
+                    ctx.body = n + ' views';
+                    });
+
+                    if (!module.parent) app.listen(3000);
+
+                    // test.js
+                    const app = require('./app');
+                    const server = app.listen();
+                    const request = require('supertest').agent(server);
+
+                    describe('Cookies Views', function() {
+                    after(function() {
+                        server.close();
+                    });
+
+                    [1, 2, 3].forEach(function(i) {
+                        describe('on iteration #' + i, function() {
+                        it('should set the views as a cookie and as the body', function(done) {
+                            request
+                            .get('/')
+                            .expect(200)
+                            .expect('Set-Cookie', new RegExp('view=' + i))
+                            .expect(i + ' views', done);
+                        });
+                        });
+                    });
+
+                    /** Errors **/
+
+                    // app.js
+                    const Koa = require('koa');
+                    const app = module.exports = new Koa();
+
+                    // look ma, error propagation!
+
+                    app.use(async function(ctx, next) {
+                    try {
+                        await next();
+                    } catch (err) {
+                        // some errors will have .status
+                        // however this is not a guarantee
+                        ctx.status = err.status || 500;
+                        ctx.type = 'html';
+                        ctx.body = '<p>Something <em>exploded</em>, please contact Maru.</p>';
+
+                        // since we handled this manually we'll
+                        // want to delegate to the regular app
+                        // level error handling as well so that
+                        // centralized still functions correctly.
+                        ctx.app.emit('error', err, ctx);
+                    }
+                    });
+
+                    // response
+
+                    app.use(async function() {
+                    throw new Error('boom boom');
+                    });
+
+                    // error handler
+
+                    app.on('error', function(err) {
+                    if (process.env.NODE_ENV != 'test') {
+                        console.log('sent error %s to the cloud', err.message);
+                        console.log(err);
+                    }
+                    });
+
+                    if (!module.parent) app.listen(3000);
+
+                    // test.js
+                    require('should');
+                    const app = require('./app');
+                    const server = app.listen();
+                    const request = require('supertest').agent(server);
+
+                    describe('Errors', function() {
+                        after(function() {
+                            server.close();
+                        });
+
+                        it('should catch the error', function(done) {
+                            request
+                            .get('/')
+                            .expect(500)
+                            .expect('Content-Type', /text\/html/, done);
+                        });
+
+                        it('should emit the error on app', function(done) {
+                            app.once('error', function(err, ctx) {
+                            err.message.should.equal('boom boom');
+                            ctx.should.be.ok;
+                            done();
+                            });
+
+                            request
+                            .get('/')
+                            .end(function() {});
+                        });
+                    });
+
+                    /** Flash Messages **/
+
+                    // app.js
+                    const Koa = require('koa');
+                    const rawBody = require('raw-body');
+                    const session = require('koa-session');
+
+                    const app = module.exports = new Koa();
+
+                    // required for signed cookie sessions
+                    app.keys = ['key1', 'key2'];
+                    app.use(session(app));
+
+                    app.use(async function(ctx, next) {
+                    if (ctx.method !== 'GET' || ctx.path !== '/messages') return await next();
+
+                    // get any messages saved in the session
+                    const messages = ctx.session.messages || [];
+                    ctx.body = messages;
+
+                    // delete the messages as they've been deliverd
+                    delete ctx.session.messages;
+                    });
+
+                    app.use(async function(ctx, next) {
+                    if (ctx.method !== 'POST' || ctx.path !== '/messages') return await next();
+
+                    // the request string is the flash message
+                    const message = await rawBody(ctx.req, {
+                        encoding: 'utf8'
+                    });
+
+                    // push the message to the session
+                    ctx.session.messages = ctx.session.messages || [];
+                    ctx.session.messages.push(message);
+
+                    // tell the client everything went okay
+                    ctx.status = 204;
+                    });
+
+                    if (!module.parent) app.listen(3000);
+
+                    // test.js
+                    require('should');
+                    const app = require('./app');
+                    const server = app.listen();
+                    const request = require('supertest').agent(server);
+
+                    describe('Flash Messages', function() {
+                        after(function() {
+                            server.close();
+                        });
+
+                        it('GET should return an empty array', function(done) {
+                            request
+                            .get('/messages')
+                            .expect(200)
+                            .expect('content-type', 'application/json; charset=utf-8')
+                            .expect('[]', done);
+                        });
+
+                        it('POST should return 204', function(done) {
+                            request
+                            .post('/messages')
+                            .send('hello')
+                            .expect(204, done);
+                        });
+
+                        it('GET should return the message', function(done) {
+                            request
+                            .get('/messages')
+                            .expect(200)
+                            .expect('content-type', 'application/json; charset=utf-8')
+                            .expect('["hello"]', done);
+                        });
+
+                        it('GET should return no more messages', function(done) {
+                            request
+                            .get('/messages')
+                            .expect(200)
+                            .expect('content-type', 'application/json; charset=utf-8')
+                            .expect('[]', done);
+                        });
+                    });
                 </div>
-                <!-- https://developpaper.com/kails-an-open-source-project-of-nodejs-similar-to-rails-based-on-koa2/ -->
-                <!-- http://component-crawler.herokuapp.com/ -->
-                <!-- https://www.facebook.com/notes/10158791368532200/ -->
-                <!-- https://github.com/koajs/todo -->
-                <!-- https://github.com/robert-ngo/koa-bookshelf -->
             </section>
         </main>
 
