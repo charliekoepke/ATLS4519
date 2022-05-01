@@ -42,8 +42,8 @@ All labs and projects for ATLS 4519 - Creative Web Development
 
 [Documentation](https://charliekoepke.wordpress.com/2022/03/09/lab-parallax-narrative/)
 
-## [Final Project - Creative Project]()
+## [Final Project - Creative Project](https://creative.colorado.edu/~chko6454/atls4519/finalproject/)
 
 > Choose a Node.js framework and npm package to learn about, and build a creative project that demonstrates the technologies usage and potential. Make it academic, artistic, and creative! Include a comprehensive "How To" as well, so other people can use and learn.
 
-[Documentation]()
+[Documentation](https://charliekoepke.wordpress.com/2022/04/21/project-creative-project/)
